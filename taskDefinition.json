@@ -1,0 +1,34 @@
+{
+  "inputPortDescriptors": [
+    {
+      "required": true,
+      "description": "The source directory with TIFF and IMD file",
+      "name": "data",
+      "type": "directory"
+    }
+  ],
+  "outputPortDescriptors": [
+    {
+      "description": "The result tensorflow output from the import statement",
+      "required": false,
+      "name": "dump",
+      "type": "directory"
+    }
+  ],
+  "containerDescriptors": [
+    {
+      "type": "DOCKER",
+      "command": "/opt/testTensorflow.sh",
+      "properties": {
+        "image": "tdgp/testtensorflow:latest",
+        "domain": "nvidiagpu"
+      }
+    }
+  ],
+  "description": "Tests importing Tensorflow within Python",
+  "name": "test-tensorflow",
+  "properties": {
+    "timeout": 36000,
+    "isPublic": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "test-tensorflow-on-gbdx",
+  "tasks": [
+    {
+      "name": "tensorflow",
+      "inputs": [
+        {
+          "name": "data",
+          "value": "<input_s3_path>"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dump"
+        }
+      ],
+      "taskType": "test-tensorflow",
+      "containerDescriptors":
+        [
+          {
+            "properties": {
+              "domain": "nvidiagpu"
+            }
+          }
+        ]
+    },
+    {
+      "name": "StageToS3",
+      "inputs": [
+        {
+          "name": "data",
+          "source": "tensorflow:dump"
+        },
+        {
+          "name": "destination",
+          "value": "<output_s3_path>"
+        }
+      ],
+      "taskType": "StageDataToS3",
+      "impersonation_allowed": true
+    }
+  ]
+}

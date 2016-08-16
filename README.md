@@ -33,8 +33,8 @@ Pushes the tdgp/testtensorflow image to DockerHub
 Runs the tdgp/testtensorflow image locally. Assumes that /opt/mnt has the folder structure that GBDx expects. In particular, the directory /opt/mnt/work/input/data/ must exist. If one is trying to fully mimic the GBDx folder structure, the following files should be present:
 
 + Folder /opt/mnt/work/input/<input_dir_name> for all directory inputs
-+ File /opt/mnt/work/gbdx_runtime.json if using task impersonation. This should be in the format: { "user_token": "<GBDX_TOKEN>" }
-+ File /opt/mnt/work/input/ports.json for string inputs. This should be in the format: { "<param_1_name>": "<param_1_value>", "<param_2_name>": "<param_2_value>" }
++ File /opt/mnt/work/gbdx_runtime.json if using task impersonation. This should be in the format: { "user_token": "\<GBDX_TOKEN\>" }
++ File /opt/mnt/work/input/ports.json for string inputs. This should be in the format: { "\<param_1_name\>": "\<param_1_value\>", "\<param_2_name\>": "\<param_2_value\>" }
 
 _NOTE_: The /opt/mnt/work/output folder will not be created by the system. It must be manually created
 

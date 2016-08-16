@@ -14,7 +14,7 @@
           "name": "dump"
         }
       ],
-      "taskType": "test-tensorflow",
+      "taskType": "test-tensorflow-v9",
       "containerDescriptors":
         [
           {

@@ -20,13 +20,13 @@
       "type": "DOCKER",
       "command": "/opt/testTensorflow.sh",
       "properties": {
-        "image": "tdgp/testtensorflow:latest",
+        "image": "tdgp/testtensorflow:v9",
         "domain": "nvidiagpu"
       }
     }
   ],
   "description": "Tests importing Tensorflow within Python",
-  "name": "test-tensorflow",
+  "name": "test-tensorflow-v9",
   "properties": {
     "timeout": 36000,
     "isPublic": false

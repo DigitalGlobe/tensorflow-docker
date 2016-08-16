@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-docker push tdgp/testtensorflow:latest
+docker tag tdgp/testtensorflow tdgp/testtensorflow:v9
+docker push tdgp/testtensorflow:v9
